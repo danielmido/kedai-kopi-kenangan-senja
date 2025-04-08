@@ -181,21 +181,15 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
-}
-
-.hero::after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 30%;
-  bottom: 0;
-  background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255, 0) 50%);
+  mask-image: linear-gradient(rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
 }
 
 .hero .content {
   padding: 1.4rem 7%;
-  max-width: 60rem;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 130px;
 }
 
 .hero .content h1 {
@@ -263,6 +257,14 @@ body {
 
 .about .row .about-img img {
   width: 100%;
+  /*
+  -- svg masking, deactivated --
+  -- note: this feature doesn't run on localhost (Apr 2025) --
+  mask-image: url(../img/menu/coffee-beans.svg);
+  mask-size: 50%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  */
 }
 
 .about .row .content {
