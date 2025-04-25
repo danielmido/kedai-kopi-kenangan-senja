@@ -34,7 +34,13 @@ document.addEventListener('click', function (e) {
   if (!sb.contains(e.target) && !searchForm.contains(e.target)) {
     searchForm.classList.remove('active');
   }
-  if (!sc.contains(e.target) && !searchForm.contains(e.target)) {
+  /*
+  kode lama, berjalan tetapi menutup menu shopping cart saat tombol +/- barang di-klik:
+    if (!sc.contains(e.target) && !searchForm.contains(e.target)) {
+      shoppingCart.classList.remove('active');
+    }
+  */
+  if (!sc.contains(e.target) && !shoppingCart.contains(e.target)) { // BARIS BARU
     shoppingCart.classList.remove('active');
   }
 });
